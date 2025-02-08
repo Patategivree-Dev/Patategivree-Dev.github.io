@@ -1,0 +1,130 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #1f1f1f; /* Gris foncé */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 40px;
+    color: #333;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.projects, .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project, .skill {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project h3, .skill h3 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.project p, .skill p {
+    color: #666;
+}
+
+.project:hover, .skill:hover {
+    transform: scale(1.05);
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #004c99;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff6600;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    .projects, .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project, .skill {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .project, .skill {
+        width: 100%;
+    }
+}
