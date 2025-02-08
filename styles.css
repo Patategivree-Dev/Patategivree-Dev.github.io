@@ -1,29 +1,67 @@
 /* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Blanc par défaut pour l'arrière-plan */
-    color: #333; /* Texte sombre pour contraster */
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Fond blanc par défaut */
+    color: #333; /* Texte sombre */
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Styles de l'en-tête */
 header {
-    background-color: #1a1a1a; /* Couleur sombre pour l'en-tête */
+    background-color: #1a1a1a; /* Fond sombre pour l'en-tête */
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header h1 {
-    margin: 0;
+    font-size: 2em;
 }
 
+header p {
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #1e90ff;
+}
+
+/* Bouton Dark/Light Mode */
 #modeToggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     background: none;
     border: none;
     color: white;
@@ -36,12 +74,12 @@ header h1 {
     transform: scale(1.1);
 }
 
-/* Container central */
+/* Contenu principal */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff; /* Fond blanc pour la page principale */
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #ffffff; /* Fond blanc par défaut */
     transition: background-color 0.3s;
 }
 
@@ -51,12 +89,15 @@ section {
 }
 
 .section-title {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
+    color: #1e90ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.projects {
+.projects, .skills {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -65,63 +106,174 @@ section {
 
 .project, .skill {
     width: 30%;
-    background-color: #ffffff; /* Fond blanc par défaut pour les projets */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    text-align: center;
 }
 
-/* Effet au survol des projets */
 .project:hover, .skill:hover {
-    transform: translateY(-10px); /* Légère translation pour donner un effet de survol */
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 .project h3, .skill h3 {
-    color: #333; /* Titre en sombre */
+    font-size: 1.5em;
+    color: #333;
 }
 
 .project p, .skill p {
-    color: #666; /* Texte des projets */
+    font-size: 1em;
+    color: #666;
 }
 
+.project a, .skill a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.project a:hover, .skill a:hover {
+    color: #ff6347;
+}
+
+/* Section Contact */
+#contact ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#contact a {
+    font-size: 1.2em;
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #ff6347;
+}
+
+/* Pied de page */
 footer {
-    background-color: #1a1a1a; /* Pied de page sombre */
+    background-color: #1a1a1a;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    margin-top: 60px;
 }
 
 footer a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff6347;
 }
 
 /* Mode sombre */
 body.dark-mode {
-    background-color: #1c2b3d; /* Bleu foncé pour le fond de la page en mode sombre */
-    color: #e0e0e0; /* Texte clair pour contraster */
+    background-color: #1c2b3d;
+    color: #e0e0e0;
 }
 
 header.dark-mode {
-    background-color: #0f1923; /* En-tête bleu très foncé */
+    background-color: #0f1923;
+}
+
+header nav a {
+    color: #e0e0e0;
+}
+
+header nav a:hover {
+    color: #1e90ff;
 }
 
 .container.dark-mode {
-    background-color: #23343f; /* Fond bleu foncé pour la page principale en mode sombre */
+    background-color: #23343f;
 }
 
 .project.dark-mode, .skill.dark-mode {
-    background-color: #2e3e4e; /* Bleu foncé pour les projets en mode sombre */
-    color: #e0e0e0; /* Texte clair pour les projets en mode sombre */
+    background-color: #2e3e4e;
+    color: #e0e0e0;
 }
 
 footer.dark-mode {
-    background-color: #0f1923; /* Pied de page bleu foncé en mode sombre */
+    background-color: #0f1923;
 }
 
-/* Dark mode button animation */
+footer a {
+    color: #e0e0e0;
+}
+
+footer a:hover {
+    color: #1e90ff;
+}
+
+/* Animation de transition du mode sombre */
 #modeToggle.dark-mode {
-    color: #1e90ff; /* Bleu clair pour le bouton en mode sombre */
+    color: #1e90ff;
+}
+
+/* Effets d'animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.section-title, .project, .skill {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects, .skills {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project, .skill {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Style pour les petits écrans */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .project, .skill {
+        width: 100%;
+    }
+
+    .project h3, .skill h3 {
+        font-size: 1.2em;
+    }
+
+    .project p, .skill p {
+        font-size: 0.9em;
+    }
 }
