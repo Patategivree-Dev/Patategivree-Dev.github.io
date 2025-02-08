@@ -1,23 +1,23 @@
-// Sélection du bouton pour changer de mode
-const modeToggleButton = document.getElementById("modeToggle");
+// Fonction pour basculer entre les modes
+const modeToggle = document.getElementById('modeToggle');
+const body = document.body;
+const header = document.querySelector('header');
+const projects = document.querySelectorAll('.project');
+const skills = document.querySelectorAll('.skill');
+const footer = document.querySelector('footer');
 
-// Vérifier si le mode sombre est déjà activé dans le stockage local
-if (localStorage.getItem("darkMode") === "enabled") {
-    document.body.classList.add("dark-mode");
-    modeToggleButton.textContent = "🌞";  // Si en mode sombre, afficher l'icône du soleil
-}
+// Fonction pour appliquer le mode
+modeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    header.classList.toggle('dark-mode');
+    footer.classList.toggle('dark-mode');
+    projects.forEach(project => project.classList.toggle('dark-mode'));
+    skills.forEach(skill => skill.classList.toggle('dark-mode'));
 
-// Ajouter un événement pour changer le mode au clic
-modeToggleButton.addEventListener("click", () => {
-    // Basculer entre le mode sombre et le mode clair
-    document.body.classList.toggle("dark-mode");
-
-    // Vérifier si le mode sombre est activé et mettre à jour le stockage local
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("darkMode", "enabled");
-        modeToggleButton.textContent = "🌞";  // Passer à l'icône du soleil
+    // Change l'émoji du bouton en fonction du mode
+    if (body.classList.contains('dark-mode')) {
+        modeToggle.textContent = '🌞'; // Mode clair
     } else {
-        localStorage.setItem("darkMode", "disabled");
-        modeToggleButton.textContent = "🌙";  // Passer à l'icône de la lune
+        modeToggle.textContent = '🌙'; // Mode sombre
     }
 });
