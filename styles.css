@@ -25,20 +25,25 @@ header p {
     font-size: 1.1em;
 }
 
-/* Bouton pour changer de mode */
+/* Style du bouton Dark/Light Mode */
 button#modeToggle {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 15px;
+    font-size: 1.3em;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 1.5em;
-    margin-top: 10px;
-    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: all 0.3s ease;
+    z-index: 100;
 }
 
 button#modeToggle:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #ddd;
+    transform: scale(1.1);
 }
 
 /* Dark Mode */
@@ -70,8 +75,8 @@ body.dark-mode footer a:hover {
 }
 
 body.dark-mode button#modeToggle {
-    color: #000;
-    border-color: #000;
+    color: #fff;
+    border-color: #fff;
 }
 
 /* Styles pour les petits écrans */
@@ -103,3 +108,4 @@ body.dark-mode button#modeToggle {
         width: 100%;
     }
 }
+
