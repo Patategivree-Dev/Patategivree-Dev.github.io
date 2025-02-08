@@ -39,6 +39,7 @@ button#modeToggle {
     right: 20px;
     transition: all 0.3s ease;
     z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'ombre pour un meilleur look */
 }
 
 button#modeToggle:hover {
@@ -75,6 +76,7 @@ body.dark-mode footer a:hover {
 }
 
 body.dark-mode button#modeToggle {
+    background-color: #333;
     color: #fff;
     border-color: #fff;
 }
@@ -108,4 +110,3 @@ body.dark-mode button#modeToggle {
         width: 100%;
     }
 }
-
