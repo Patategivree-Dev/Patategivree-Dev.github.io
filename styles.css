@@ -1,156 +1,175 @@
-/* Style de base */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;  /* Couleur de fond clair */
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif; /* Une police moderne et professionnelle */
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: #2980b9; /* Bleu clair pour les liens */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3498db; /* Bleu plus lumineux lors du survol */
+    text-decoration: underline;
+}
+
+/* Header */
 header {
-    background-color: #2c3e50; /* Bleu-gris */
+    background-color: #34495e; /* Un bleu foncé élégant */
     color: #fff;
-    padding: 20px 30px;
+    padding: 40px 20px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 header p {
     font-size: 1.2em;
-    margin-top: 10px;
+    font-weight: 300;
 }
 
-/* Style du bouton Dark/Light Mode */
+/* Mode Dark/Light Button */
 button#modeToggle {
     background-color: #fff;
-    color: #333;
-    border: 2px solid #333;
-    padding: 10px 15px;
+    color: #34495e;
+    border: 2px solid #34495e;
+    padding: 10px 20px;
     font-size: 1.3em;
-    border-radius: 25px;
-    cursor: pointer;
+    border-radius: 30px;
     position: absolute;
     top: 20px;
     right: 20px;
+    cursor: pointer;
     transition: all 0.3s ease;
     z-index: 100;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 button#modeToggle:hover {
-    background-color: #ddd;
-    transform: scale(1.1);
+    background-color: #ecf0f1;
+    transform: scale(1.05);
 }
 
-/* Contenu général */
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
-/* Titre de section */
+/* Section Titles */
 .section-title {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-top: 40px;
-    color: #333;
     text-align: center;
+    color: #34495e;
+    font-weight: 600;
 }
 
-/* Projets */
+/* Projects and Skills Section */
 .projects, .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .project, .skill {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 15px;
-    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 25px;
     width: 30%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover, .skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project h3, .skill h3 {
-    color: #333;
+    font-size: 1.8em;
+    color: #2980b9;
+    margin-bottom: 15px;
 }
 
 .project p, .skill p {
-    color: #666;
-}
-
-.project a, .skill a {
-    color: #3498db;  /* Couleur bleue */
-    text-decoration: none;
-}
-
-.project a:hover, .skill a:hover {
-    text-decoration: underline;
+    font-size: 1.1em;
+    color: #7f8c8d;
 }
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
+    background-color: #34495e;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 30px 20px;
+    margin-top: 60px;
 }
 
 footer a {
-    color: #3498db;
-    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 600;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #3498db;
 }
 
-/* Mode Sombre */
+/* Dark Mode */
 body.dark-mode {
-    background-color: #121212;
-    color: #fff;
+    background-color: #2c3e50;
+    color: #ecf0f1;
 }
 
 body.dark-mode header {
-    background-color: #333;
+    background-color: #1a252f;
 }
 
 body.dark-mode footer {
-    background-color: #333;
+    background-color: #1a252f;
 }
 
 body.dark-mode .project, 
 body.dark-mode .skill {
-    background-color: #333;
-    border-color: #444;
+    background-color: #34495e;
+    border-color: #1a252f;
 }
 
 body.dark-mode a {
-    color: #80d0ff;  /* Bleue claire */
+    color: #3498db;
 }
 
 body.dark-mode footer a:hover {
-    color: #ff6600;
+    color: #e67e22;
 }
 
 body.dark-mode button#modeToggle {
-    background-color: #333;
+    background-color: #34495e;
     color: #fff;
     border-color: #fff;
 }
 
-/* Responsive (pour les petits écrans) */
+/* Responsive Design */
 @media (max-width: 768px) {
     .projects, .skills {
         flex-direction: column;
@@ -164,19 +183,14 @@ body.dark-mode button#modeToggle {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 2em;
-    }
-
-    header p {
-        font-size: 1em;
+        font-size: 2.5em;
     }
 
     .section-title {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .project, .skill {
         width: 100%;
     }
 }
-
