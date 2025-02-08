@@ -1,14 +1,15 @@
 /* Styles de base */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #1c2b3d; /* Bleu foncé pour le fond */
+    color: #e0e0e0; /* Texte clair pour contraster */
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #333;
+    background-color: #14202b; /* Bleu plus foncé pour l'en-tête */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -62,7 +63,7 @@ section {
 
 .project, .skill {
     width: 30%;
-    background-color: white;
+    background-color: #2d3a4b; /* Bleu foncé pour les boîtes de projet */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -70,15 +71,15 @@ section {
 }
 
 .project h3, .skill h3 {
-    color: #333;
+    color: #ffffff; /* Texte en blanc dans les projets */
 }
 
 .project p, .skill p {
-    color: #666;
+    color: #ccc; /* Texte légèrement clair pour contraster */
 }
 
 footer {
-    background-color: #333;
+    background-color: #14202b; /* Bleu foncé pour le pied de page */
     color: white;
     text-align: center;
     padding: 10px;
@@ -89,26 +90,26 @@ footer a {
     text-decoration: none;
 }
 
-/* Dark mode */
+/* Mode sombre */
 body.dark-mode {
-    background-color: #2d2d2d;
+    background-color: #1c2b3d; /* Bleu foncé pour le fond en mode sombre */
     color: #e0e0e0;
 }
 
 header.dark-mode {
-    background-color: #222;
+    background-color: #0f1923; /* Bleu très foncé pour l'en-tête en mode sombre */
 }
 
 .project.dark-mode, .skill.dark-mode {
-    background-color: #444;
+    background-color: #23343f; /* Bleu encore plus foncé pour les projets en mode sombre */
     color: #e0e0e0;
 }
 
 footer.dark-mode {
-    background-color: #222;
+    background-color: #0f1923; /* Pied de page bleu très foncé */
 }
 
 /* Dark mode button animation */
 #modeToggle.dark-mode {
-    color: #f39c12;
+    color: #1e90ff; /* Bleu clair pour le bouton en mode sombre */
 }
