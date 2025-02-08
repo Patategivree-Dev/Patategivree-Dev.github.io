@@ -57,7 +57,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #1c2b3d;
+    color: #1e90ff;
 }
 
 /* Bouton Dark/Light Mode */
@@ -92,7 +92,7 @@ section {
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
-    color: #1c2b3d;
+    color: #1e90ff;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -130,7 +130,7 @@ section {
 }
 
 .project a, .skill a {
-    color: #1c2b3d;
+    color: #1e90ff;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -151,7 +151,7 @@ section {
 
 #contact a {
     font-size: 1.2em;
-    color: #1c2b3d;
+    color: #1e90ff;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -198,7 +198,7 @@ header nav a:hover {
 }
 
 .container.dark-mode {
-    background-color: #1c2b3d;
+    background-color: #23343f;
 }
 
 .project.dark-mode, .skill.dark-mode {
