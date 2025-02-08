@@ -1,9 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Patate Givrée</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de minipinot - Développeur">
+    <title>Portfolio - minipinot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Quelques styles de base pour l'exemple */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            color: #333;
+        }
+
+        .projects, .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project, .skill {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3, .skill h3 {
+            color: #333;
+        }
+
+        .project p, .skill p {
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenue sur PatateGivree.github.io !</h1>
+
+    <header>
+        <h1>Portfolio de minipinot</h1>
+        <p>Développeur web et passionné de code</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Présentation -->
+        <section id="about">
+            <h2 class="section-title">À propos de moi</h2>
+            <p>Je suis un développeur web passionné par la création de sites web et d'applications interactives. Mon objectif est de fournir des expériences utilisateurs exceptionnelles en utilisant des technologies modernes.</p>
+        </section>
+
+        <!-- Projets -->
+        <section id="projects">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Site de gestion de tâches</h3>
+                    <p>Une application pour gérer les tâches quotidiennes avec une interface simple et intuitive.</p>
+                    <a href="#">Voir le projet</a>
+                </div>
+                <div class="project">
+                    <h3>Portfolio Personnel</h3>
+                    <p>Mon portfolio pour présenter mes compétences et projets en développement web.</p>
+                    <a href="#">Voir le projet</a>
+                </div>
+                <div class="project">
+                    <h3>Application de recettes</h3>
+                    <p>Une application permettant de trouver des recettes de cuisine en fonction des ingrédients.</p>
+                    <a href="#">Voir le projet</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section id="skills">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>HTML/CSS</h3>
+                    <p>Création de sites web réactifs et adaptatifs en utilisant HTML5 et CSS3.</p>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <p>Développement d'applications interactives avec JavaScript et bibliothèques comme React.</p>
+                </div>
+                <div class="skill">
+                    <h3>PHP/MySQL</h3>
+                    <p>Développement de sites dynamiques avec PHP et gestion de bases de données avec MySQL.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 minipinot. Tous droits réservés. <br>Suivez-moi sur <a href="#">GitHub</a> et <a href="#">LinkedIn</a>.</p>
+    </footer>
+
 </body>
 </html>
