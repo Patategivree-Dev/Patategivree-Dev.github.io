@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -24,79 +25,53 @@ header p {
     font-size: 1.1em;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.section-title {
-    text-align: center;
-    margin-top: 40px;
-    color: #333;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.projects, .skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.project, .skill {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 15px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.project h3, .skill h3 {
-    color: #333;
-    font-size: 1.5em;
-}
-
-.project p, .skill p {
-    color: #666;
-}
-
-.project:hover, .skill:hover {
-    transform: scale(1.05);
-}
-
-a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #004c99;
-}
-
-footer {
-    background-color: #1f1f1f;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-footer a {
+/* Bouton pour changer de mode */
+button#modeToggle {
+    background-color: transparent;
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
-footer a:hover {
+button#modeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode footer {
+    background-color: #333;
+}
+
+body.dark-mode .project, 
+body.dark-mode .skill {
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-mode a {
+    color: #80d0ff;
+}
+
+body.dark-mode footer a:hover {
     color: #ff6600;
+}
+
+body.dark-mode button#modeToggle {
+    color: #000;
+    border-color: #000;
 }
 
 /* Styles pour les petits écrans */
