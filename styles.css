@@ -1,7 +1,7 @@
 /* Styles de base */
 body {
     font-family: Arial, sans-serif;
-    background-color: #1c2b3d; /* Bleu foncé */
+    background-color: #1c2b3d; /* Bleu foncé pour le fond de la page en mode sombre */
     color: #e0e0e0; /* Texte clair pour contraster */
     margin: 0;
     padding: 0;
@@ -41,6 +41,8 @@ header h1 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #ffffff; /* Fond blanc par défaut pour la page principale en mode clair */
+    transition: background-color 0.3s;
 }
 
 /* Sections */
@@ -92,12 +94,16 @@ footer a {
 
 /* Mode sombre */
 body.dark-mode {
-    background-color: #1c2b3d; /* Bleu foncé pour le fond en mode sombre */
+    background-color: #1c2b3d; /* Bleu foncé pour le fond de la page en mode sombre */
     color: #e0e0e0;
 }
 
 header.dark-mode {
     background-color: #0f1923; /* Bleu très foncé pour l'en-tête en mode sombre */
+}
+
+.container.dark-mode {
+    background-color: #23343f; /* Fond bleu foncé pour la page principale en mode sombre */
 }
 
 .project.dark-mode, .skill.dark-mode {
