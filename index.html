@@ -3,35 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de PatateGivree - Développeur">
+    <meta name="description" content="Portfolio de PatateGivree - Développeur Java et moddeur Minecraft">
+    <meta name="author" content="PatateGivree">
+    <meta name="keywords" content="Développeur Java, Portfolio, Mod Minecraft, Backrooms mod, Développeur Web">
     <title>Portfolio - PatateGivree</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Header avec navigation -->
     <header>
-        <h1>Portfolio de PatateGivree</h1>
-        <p>Développeur Java et débutant en code</p>
-        <!-- Bouton Dark/Light Mode -->
-        <button id="modeToggle" title="Changer le mode">🌙</button>
+        <div class="header-container">
+            <h1>Portfolio de PatateGivree</h1>
+            <p>Développeur Java et débutant en développement web</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Bouton Dark/Light Mode -->
+            <button id="modeToggle" title="Changer le mode">🌙</button>
+        </div>
     </header>
 
-    <div class="container">
+    <!-- Section principale du site -->
+    <main class="container">
 
         <!-- Présentation -->
         <section id="about">
             <h2 class="section-title">À propos de moi</h2>
-            <p>Je suis un développeur Java, je suis principalement entrain de m'occuper du "Backrooms mod", un mod Minecraft dans lequel j'ai aidé "Lumaa".</p>
+            <p>Je suis un développeur Java, passionné par la création de mods Minecraft. Actuellement, je travaille sur le mod "Backrooms" avec "Lumaa".</p>
         </section>
 
-        <!-- Projets -->
+        <!-- Mes projets -->
         <section id="projects">
             <h2 class="section-title">Mes Projets</h2>
             <div class="projects">
                 <div class="project">
                     <h3>Backrooms mod</h3>
-                    <p>Mod Minecraft basé sur la creepypasta des Backrooms, popularisé par Kane Pixels.</p>
-                    <a href="https://modrinth.com/mod/backrooms" target="_blank">Voir le projet</a>
+                    <p>Un mod Minecraft inspiré de la creepypasta des Backrooms, popularisé par Kane Pixels.</p>
+                    <a href="https://modrinth.com/mod/backrooms" target="_blank" rel="noopener noreferrer">Voir le projet</a>
                 </div>
                 <div class="project">
                     <h3>Test</h3>
@@ -52,19 +66,30 @@
             <div class="skills">
                 <div class="skill">
                     <h3>HTML/CSS</h3>
-                    <p>Débutant dans la création de sites web en utilisant HTML5 et CSS3.</p>
+                    <p>Développeur débutant en HTML5 et CSS3. Passionné par le design web et l'intégration de maquettes.</p>
                 </div>
                 <div class="skill">
                     <h3>JavaScript</h3>
-                    <p>Développement de mods Minecraft (notamment le Backrooms mod).</p>
+                    <p>Développement de mods Minecraft avec JavaScript (notamment le Backrooms mod).</p>
                 </div>
             </div>
         </section>
 
-    </div>
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <p>Vous pouvez me contacter sur GitHub ou Discord. Suivez-moi et collaborons ensemble !</p>
+            <ul>
+                <li><a href="https://github.com/Patategivree-Dev" target="_blank">GitHub</a></li>
+                <li><a href="https://discord.gg/Rqpn3C7yR5" target="_blank">Discord</a></li>
+            </ul>
+        </section>
 
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 PatateGivree. Tous droits réservés. <br>Suivez-moi sur <a href="https://github.com/Patategivree-Dev">GitHub</a> et <a href="https://discord.gg/Rqpn3C7yR5">Discord</a>.</p>
+        <p>&copy; 2025 PatateGivree. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>
