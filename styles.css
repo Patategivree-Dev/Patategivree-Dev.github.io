@@ -26,20 +26,21 @@ header {
 
 header .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-header h1 {
+.header-container h1 {
     font-size: 2em;
+    text-align: center;
 }
 
 header p {
     font-size: 1.1em;
     color: #ccc;
+    padding-right: 8%;
 }
 
 header nav ul {
@@ -86,6 +87,10 @@ header nav a:hover {
 /* Sections */
 section {
     margin-bottom: 60px;
+}
+
+#about p {
+    text-align: center;
 }
 
 .section-title {
@@ -179,6 +184,11 @@ footer a:hover {
     color: #ff6347;
 }
 
+.dark-mode h3, .dark-mode p {
+    color: white;
+
+}
+
 /* Mode sombre */
 body.dark-mode {
     background-color: #1c2b3d;
@@ -208,6 +218,10 @@ header nav a:hover {
 
 footer.dark-mode {
     background-color: #0f1923;
+}
+
+footer ul li {
+    list-style: none;
 }
 
 footer a {
@@ -244,6 +258,10 @@ footer a:hover {
         text-align: center;
     }
 
+    header p {
+        padding: 0px;
+    }
+
     .projects, .skills {
         flex-direction: column;
         gap: 30px;
@@ -257,6 +275,11 @@ footer a:hover {
 
 /* Style pour les petits écrans */
 @media (max-width: 480px) {
+
+    header p {
+        padding: 0px;
+    }
+
     .section-title {
         font-size: 2em;
     }
