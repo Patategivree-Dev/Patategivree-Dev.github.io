@@ -165,23 +165,48 @@ section {
     color: #ff6347;
 }
 
-/* Section reseaux sociaux */
-
-#reseaux sociaux ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Section Réseaux Sociaux */
+#reseaux-sociaux {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-#reseaux sociaux a {
-    font-size: 1.2em;
+.reseaux-sociaux {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.reseaux-sociaux .reseau {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.reseaux-sociaux .reseau:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reseaux-sociaux h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.reseaux-sociaux a {
     color: #1e90ff;
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-#reseaux sociaux a:hover {
+.reseaux-sociaux a:hover {
     color: #ff6347;
 }
 
