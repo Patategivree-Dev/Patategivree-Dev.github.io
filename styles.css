@@ -102,14 +102,14 @@ section {
     letter-spacing: 2px;
 }
 
-.projects, .skills {
+.projects, .skills, .reseaux sociaux {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
 }
 
-.project, .skill {
+.project, .skill, .reseaux sociaux {
     width: 30%;
     background-color: #ffffff;
     padding: 20px;
@@ -119,7 +119,7 @@ section {
     text-align: center;
 }
 
-.project:hover, .skill:hover {
+.project:hover, .skill:hover, .reseaux sociaux:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
@@ -142,7 +142,7 @@ section {
     margin-top: 10px;
 }
 
-.project a:hover, .skill a:hover {
+.project a:hover, .skill a:hover, .reseaux sociaux a:hover {
     color: #ff6347;
 }
 
@@ -162,6 +162,26 @@ section {
 }
 
 #contact a:hover {
+    color: #ff6347;
+}
+
+/* Section reseaux sociaux */
+
+#reseaux sociaux ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#reseaux sociaux a {
+    font-size: 1.2em;
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#reseaux sociaux a:hover {
     color: #ff6347;
 }
 
