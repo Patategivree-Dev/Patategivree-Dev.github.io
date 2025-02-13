@@ -256,7 +256,7 @@ header nav a:hover {
     background-color: #1c2b3d;
 }
 
-.project.dark-mode, .skill.dark-mode {
+.project.dark-mode, .skill.dark-mode .reseaux-sociaux.dark-mode {
     background-color: #2e3e4e;
     color: #e0e0e0;
 }
@@ -307,12 +307,12 @@ footer a:hover {
         padding: 0px;
     }
 
-    .projects, .skills {
+    .projects, .skills, .reseaux-sociaux {
         flex-direction: column;
         gap: 30px;
     }
 
-    .project, .skill {
+    .project, .skill, .reseaux-sociaux {
         width: 80%;
         margin: 0 auto;
     }
@@ -333,15 +333,15 @@ footer a:hover {
         font-size: 1.8em;
     }
 
-    .project, .skill {
+    .project, .skill, .reseaux-sociaux {
         width: 100%;
     }
 
-    .project h3, .skill h3 {
+    .project h3, .skill h3, .reseaux-sociaux h3 {
         font-size: 1.2em;
     }
 
-    .project p, .skill p {
+    .project p, .skill p, .reseaux-sociaux p {
         font-size: 0.9em;
     }
 }
