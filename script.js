@@ -1,13 +1,13 @@
 // Gestion du changement de mode
 const modeToggle = document.getElementById('modeToggle');
 const body = document.body;
-const header = document.querySelector('header');
-const container = document.querySelector('.container');
-const projects = document.querySelectorAll('.project');
-const skills = document.querySelectorAll('.skill');
-const footer = document.querySelector('footer');
 
-// Vérifie si le mode sombre est stocké dans le localStorage
+// Sélection de tous les éléments concernés par le mode sombre
+const elementsToToggle = document.querySelectorAll(
+    'header, .container, .project, .skill, .reseaux-sociaux .reseau, footer'
+);
+
+// Vérifie si le mode sombre est activé dans le localStorage
 if (localStorage.getItem('darkMode') === 'enabled') {
     enableDarkMode();
 } else {
@@ -17,37 +17,24 @@ if (localStorage.getItem('darkMode') === 'enabled') {
 // Fonction pour activer le mode sombre
 function enableDarkMode() {
     body.classList.add('dark-mode');
-    header.classList.add('dark-mode');
-    container.classList.add('dark-mode');
-    footer.classList.add('dark-mode');
-    projects.forEach(project => project.classList.add('dark-mode'));
-    skills.forEach(skill => skill.classList.add('dark-mode'));
+    elementsToToggle.forEach(el => el.classList.add('dark-mode'));
     modeToggle.classList.add('dark-mode');
     modeToggle.innerHTML = '🌙'; // Icône pour activer le mode clair
-    localStorage.setItem('darkMode', 'enabled'); // Sauvegarde le mode dans le localStorage
+    localStorage.setItem('darkMode', 'enabled');
 }
 
 // Fonction pour désactiver le mode sombre
 function disableDarkMode() {
     body.classList.remove('dark-mode');
-    header.classList.remove('dark-mode');
-    container.classList.remove('dark-mode');
-    footer.classList.remove('dark-mode');
-    projects.forEach(project => project.classList.remove('dark-mode'));
-    skills.forEach(skill => skill.classList.remove('dark-mode'));
+    elementsToToggle.forEach(el => el.classList.remove('dark-mode'));
     modeToggle.classList.remove('dark-mode');
     modeToggle.innerHTML = '🌑'; // Icône pour activer le mode sombre
-    localStorage.setItem('darkMode', 'disabled'); // Sauvegarde le mode dans le localStorage
+    localStorage.setItem('darkMode', 'disabled');
 }
 
 // Écouteur d'événements pour le bouton de mode
 modeToggle.addEventListener('click', () => {
-    // Si le mode sombre est déjà activé, on le désactive, sinon on l'active
-    if (body.classList.contains('dark-mode')) {
-        disableDarkMode();
-    } else {
-        enableDarkMode();
-    }
+    body.classList.contains('dark-mode') ? disableDarkMode() : enableDarkMode();
 });
 
 // Effet de transition au survol du bouton
