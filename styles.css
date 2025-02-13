@@ -256,17 +256,15 @@ header nav a:hover {
     background-color: #1c2b3d;
 }
 
-.project.dark-mode, .skill.dark-mode .reseaux-sociaux.dark-mode {
+.project.dark-mode, 
+.skill.dark-mode, 
+.reseaux-sociaux .reseau.dark-mode {
     background-color: #2e3e4e;
     color: #e0e0e0;
 }
 
 footer.dark-mode {
     background-color: #0f1923;
-}
-
-footer ul li {
-    list-style: none;
 }
 
 footer a {
