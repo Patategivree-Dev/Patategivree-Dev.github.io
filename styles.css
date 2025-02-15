@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Styles de base */
 * {
     margin: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Public Sans", 'Arial', sans-serif;
     background-color: #ffffff; /* Fond blanc par défaut */
     color: #333; /* Texte sombre */
     margin: 0;
@@ -57,12 +59,18 @@ header nav a {
     transition: color 0.3s;
 }
 
-header nav a:hover {
+a {
     color: #1e90ff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    color: #ff6347;
 }
 
 /* Bouton Dark/Light Mode */
-#modeToggle {
+.modeToggle {
     background: none;
     border: none;
     color: white;
@@ -71,7 +79,7 @@ header nav a:hover {
     transition: transform 0.3s;
 }
 
-#modeToggle:hover {
+.modeToggle:hover {
     transform: scale(1.1);
 }
 
@@ -102,14 +110,14 @@ section {
     letter-spacing: 2px;
 }
 
-.projects, .skills, .reseaux sociaux {
+.projects, .skills, .socials {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
 }
 
-.project, .skill, .reseaux sociaux {
+.project, .skill, .social {
     width: 30%;
     background-color: #ffffff;
     padding: 20px;
@@ -119,8 +127,8 @@ section {
     text-align: center;
 }
 
-.project:hover, .skill:hover, .reseaux sociaux:hover {
-    transform: translateY(-10px);
+.project:hover, .skill:hover, .social:hover {
+    transform: scale(1.03);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -135,79 +143,43 @@ section {
 }
 
 .project a, .skill a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: bold;
     display: inline-block;
     margin-top: 10px;
 }
 
-.project a:hover, .skill a:hover, .reseaux sociaux a:hover {
-    color: #ff6347;
-}
-
 /* Section Contact */
-#contact ul {
+ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-#contact a {
-    font-size: 1.2em;
-    color: #1e90ff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-#contact a:hover {
-    color: #ff6347;
-}
-
 /* Section Réseaux Sociaux */
-#reseaux-sociaux {
+section.socials {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.reseaux-sociaux {
+.socials {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.reseaux-sociaux .reseau {
-    width: 250px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
+.socials .social {
+    max-width: 300px;
 }
 
-.reseaux-sociaux .reseau:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.reseaux-sociaux h3 {
+.socials h3 {
     font-size: 1.5em;
     color: #333;
 }
 
-.reseaux-sociaux a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: bold;
+.socials a {
     display: inline-block;
     margin-top: 10px;
-}
-
-.reseaux-sociaux a:hover {
-    color: #ff6347;
 }
 
 /* Pied de page */
@@ -217,16 +189,6 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 60px;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: #ff6347;
 }
 
 .dark-mode h3, .dark-mode p {
@@ -240,8 +202,8 @@ body.dark-mode {
     color: #e0e0e0;
 }
 
-header.dark-mode {
-    background-color: #1c2b3d;
+body.dark-mode header {
+    background-color: #141f2e;
 }
 
 header nav a {
@@ -252,46 +214,22 @@ header nav a:hover {
     color: #1e90ff;
 }
 
-.container.dark-mode {
+body.dark-mode .container {
     background-color: #1c2b3d;
 }
 
-.project.dark-mode, 
-.skill.dark-mode, 
-.reseaux-sociaux .reseau.dark-mode {
+body.dark-mode .project, body.dark-mode .skill, body.dark-mode .social {
     background-color: #2e3e4e;
     color: #e0e0e0;
 }
 
-footer.dark-mode {
+body.dark-mode footer {
     background-color: #0f1923;
 }
 
-footer a {
-    color: #e0e0e0;
-}
-
-footer a:hover {
-    color: #1e90ff;
-}
-
 /* Animation de transition du mode sombre */
-#modeToggle.dark-mode {
+body.dark-mode .modeToggle {
     color: #1e90ff;
-}
-
-/* Effets d'animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.section-title, .project, .skill {
-    animation: fadeIn 1s ease-in;
 }
 
 /* Responsivité */
@@ -305,41 +243,14 @@ footer a:hover {
         padding: 0px;
     }
 
-    .projects, .skills, .reseaux-sociaux {
+    .projects, .skills, .socials {
         flex-direction: column;
         gap: 30px;
     }
 
-    .project, .skill, .reseaux-sociaux {
+    .project, .skill, .social {
         width: 80%;
         margin: 0 auto;
-    }
-}
-
-/* Style pour les petits écrans */
-@media (max-width: 480px) {
-
-    header p {
-        padding: 0px;
-    }
-
-    .section-title {
-        font-size: 2em;
-    }
-
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    .project, .skill, .reseaux-sociaux {
-        width: 100%;
-    }
-
-    .project h3, .skill h3, .reseaux-sociaux h3 {
-        font-size: 1.2em;
-    }
-
-    .project p, .skill p, .reseaux-sociaux p {
-        font-size: 0.9em;
+        max-width: 80% !important;
     }
 }
